@@ -15,16 +15,11 @@ const UserList = () => {
         }
 
         const data = await response.json();
-        //setUsers(data);
-        // Simulate a delay of 1.5 seconds before setting the data
-        setTimeout(() => {
-          setUsers(data);
-          setLoading(false);
-        }, 1500);
+        setUsers(data);
       } catch (err) {
         setError(err.message);
       } finally {
-        //setLoading(false);
+        setLoading(false);
       }
     };
 
